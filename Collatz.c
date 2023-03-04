@@ -1,27 +1,26 @@
-/* A sequência de Collatz: Escreva um programa em C que receba um número inteiro
-positivo "n" e retorne o número de termos da sequência de Collatz que começam em
-"n", utilizando recursividade. A sequência de Collatz é definida como: se o número é
-par, divida-o por 2, se o número é ímpar, multiplique-o por 3 e adicione 1, repita até
+/* A sequÃªncia de Collatz: Escreva um programa em C que receba um nÃºmero inteiro
+positivo "n" e retorne o nÃºmero de termos da sequÃªncia de Collatz que comeÃ§am em
+"n", utilizando recursividade. A sequÃªncia de Collatz Ã© definida como: se o nÃºmero Ã©
+par, divida-o por 2, se o nÃºmero Ã© Ã­mpar, multiplique-o por 3 e adicione 1, repita atÃ©
 chegar a 1. */
 
 #include <stdio.h>
 
 int collatz(int n) {
-    int val = 1;
-
+    
     if (n == 1) {
         return 1;
     } 
-	else if (n % 2 == 0) {
+    else if (n % 2 == 0) {
         return 1 + collatz(n / 2);
     } 
-	else {
+    else {
         return 1 + collatz(3 * n + 1);
     }
 }
 
 int main() {
-	int n, i;
+	int n;
 	
 	printf("\n Digite um numero inteiro positivo: ");
     scanf("%d", &n);
